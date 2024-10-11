@@ -12,10 +12,10 @@
     <header id="header"> 
         <div class="header-content">
           <div class="logo-section">
-            <a href="/templates/index.html" class="logo-link" style="margin-left: -120px;"> 
+            <a href="http://127.0.0.1:5000/" class="logo-link" style="margin-left: -120px;"> 
                 <img src="/static/pictures/logo.png" alt="Лого" class="logo">
             </a>
-            <a href="/templates/index.html" class="logo-link" style="text-decoration: none;"> 
+            <a href="http://127.0.0.1:5000/" class="logo-link" style="text-decoration: none;"> 
                 <span style="margin-top: -30px; color: white;" class="site-name">Cyberyx</span>
             </a>
         </div>
@@ -30,22 +30,9 @@
                 <div class="catalog-container">
                     <div class="category-list">
                         <ul> 
-                            <li onmouseover="showProducts('laptops')"><a href="#">Ноутбуки та комп'ютери</a></li>
-                            <li onmouseover="showProducts('smartphones')"><a href="#">Смартфони, ТВ і електроніка</a></li>
-                            <li onmouseover="showProducts('gaming')"><a href="#">Товари для геймерів</a></li>
-                            <li onmouseover="showProducts('home_appliances')"><a href="#">Побутова техніка</a></li>
-                            <li onmouseover="showProducts('home_goods')"><a href="#">Товари для дому</a></li>
-                            <li onmouseover="showProducts('tools')"><a href="#">Інструменти та автотовари</a></li>
-                            <li onmouseover="showProducts('plumbing')"><a href="#">Сантехніка та ремонт</a></li>
-                            <li onmouseover="showProducts('garden')"><a href="#">Дача, сад і город</a></li>
-                            <li onmouseover="showProducts('sports')"><a href="#">Спорт і захоплення</a></li>
-                            <li onmouseover="showProducts('clothing')"><a href="#">Одяг, взуття та прикраси</a></li>
-                            <li onmouseover="showProducts('beauty')"><a href="#">Краса та здоров'я</a></li>
-                            <li onmouseover="showProducts('kids')"><a href="#">Дитячі товари</a></li>
-                            <li onmouseover="showProducts('pets')"><a href="#">Зоотовари</a></li>
-                            <li onmouseover="showProducts('office')"><a href="#">Офіс, школа, книги</a></li>
-                            <li onmouseover="showProducts('alcohol')"><a href="#">Алкогольні напої та продукти</a></li>
-                            <li onmouseover="showProducts('cleaning')"><a href="#">Побутова хімія</a></li>
+                            <li onmouseover="showProducts('laptops')"><a href="#">Ноутбуки та комп'ютери</a></li>       
+                            <li><a href="http://127.0.0.1:5000/">Головна</a></li>
+                            <li><a href="http://127.0.0.1:5000/about">Про нас</a></li>
                         </ul>
                     </div>
                     <div class="product-list" id="productList">
@@ -88,7 +75,8 @@
     {% block mainContent%}{% endblock%}
 
 
-    
+    {% block Goods %}{% endblock%}
+
     
 
 
