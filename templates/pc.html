@@ -1,0 +1,283 @@
+{% extends 'base.html'%}
+
+{% block title%}
+Комп'ютери
+{% endblock%}
+
+
+
+
+{% block Goods %}
+<h1 style="text-align: center; font-family: 'Roboto', sans-serif;">Комп'ютери</h1>
+<div class="product-container" style="margin-top: 50px;   display: flex; flex-wrap: nowrap; overflow-x: auto; padding: 0 20px; justify-content: center; align-items: center; margin-bottom: 40px; font-family: 'Roboto', sans-serif;">
+    <div class="product-card-inner" style="border: 1px solid #FD7E14; border-radius: 10px; overflow: hidden; padding: 15px; text-align: center; position: relative; height: 300px; display: flex; flex-direction: column; justify-content: flex-start; margin-right: 20px;">
+        <div class="product-card-front">
+            <img src="/static/pictures/pc1.png" style="width: 200px; height: 200px; object-fit: contain; " alt="Комп'ютер ARTLINE Gaming X49">
+            <div class="product-name" style="font-size: 16px; margin-left: -10px; margin-right: 20px;">Комп'ютер ARTLINE Gaming X49</div>
+            <div class="product-price" style="color: black; font-size: 16px; font-weight: bold; margin: 15px 0;">₴37 999</div>
+        </div>
+        <div class="product-card-back">
+            <div class="icon-container">
+                <div class="favorite-icon" onclick="toggleFavorite(this)" style="position: absolute; top: 5px; right: 10px; cursor: pointer;">
+                    <img src="/static/pictures/icon4.png" alt="Додати до улюблених" class="favorite-icon-img" data-full="/static/pictures/iconfull.png">
+                </div>
+                <div class="compare-icon" onclick="addToCompare(this)">
+                    <img src="/static/pictures/icon3.png" style="width: 24px; height: 24px;" alt="Додати до порівняння" class="compare-icon-img">
+                </div>
+            </div>
+            <h3>Короткі характеристики:</h3>
+            <ul>
+                <li>Процесор: AMD Ryzen 5 5600 (3.5 - 4.4 ГГц)</li>
+                <li>Обсяг оперативної пам'яті: 32 ГБ</li>
+                <li>Відеокарта: GeForce RTX 4060 Ti</li>
+                <li>Чипсет материнської плати: AMD B450</li>
+            </ul>
+            <button class="buy-button" onclick="buyProduct('Комп’ютер ARTLINE Gaming X49','Ціна уточнюється')">Купити</button>
+        </div>
+    </div>
+    
+    <div class="product-card-inner" style="border: 1px solid #FD7E14; border-radius: 10px; overflow: hidden; padding: 15px; text-align: center; position: relative; height: 300px; display: flex; flex-direction: column; justify-content: flex-start; margin-right: 20px;">
+        <div class="product-card-front">
+            <img src="/static/pictures/pc2.png" style="width: 200px; height: 200px; object-fit: contain;" alt="Комп'ютер ARTLINE Gaming X75">
+            <div class="product-name" style="font-size: 16px; margin-left: -10px; margin-right: 20px;">Комп'ютер ARTLINE Gaming X75</div>
+            <div class="product-price" style="color: black; font-size: 16px; font-weight: bold; margin: 15px 0;">₴51 999</div>
+        </div>
+        <div class="product-card-back">
+            <div class="icon-container">
+                <div class="favorite-icon" onclick="toggleFavorite(this)" style="position: absolute; top: 5px; right: 10px; cursor: pointer;">
+                    <img src="/static/pictures/icon4.png" alt="Додати до улюблених" class="favorite-icon-img" data-full="/static/pictures/iconfull.png">
+                </div>
+                <div class="compare-icon" onclick="addToCompare(this)">
+                    <img src="/static/pictures/icon3.png" style="width: 24px; height: 24px;" alt="Додати до порівняння" class="compare-icon-img">
+                </div>
+            </div>
+            <h3>Короткі характеристики:</h3>
+            <ul>
+                <li>Процесор: Intel Core i7-12700F</li>
+                <li>Відеокарта: GeForce RTX 4060 Ti</li>
+                <li>Чипсет материнської плати: Intel B660</li>
+                <li>Обсяг оперативної пам'яті: 32ГБ</li>
+            </ul>
+            <button class="buy-button" onclick="buyProduct('Комп’ютер ARTLINE Gaming X75','Ціна уточнюється')">Купити</button>
+        </div>
+    </div>
+    
+    <div class="product-card-inner" style="border: 1px solid #FD7E14; border-radius: 10px; overflow: hidden; padding: 15px; text-align: center; position: relative; height: 300px; display: flex; flex-direction: column; justify-content: flex-start; margin-right: 20px;">
+        <div class="product-card-front">
+            <img src="/static/pictures/pc3.png" style="width: 200px; height: 200px; object-fit: contain;" alt="Комп'ютер COBRA Advanced">
+            <div class="product-name" style="font-size: 16px; margin-left: -10px; margin-right: 20px;">Комп'ютер COBRA Advanced</div>
+            <div class="product-price" style="color: black; font-size: 16px; font-weight: bold; margin: 15px 0;">₴38 999</div>
+        </div>
+        <div class="product-card-back">
+            <div class="icon-container">
+                <div class="favorite-icon" onclick="toggleFavorite(this)" style="position: absolute; top: 5px; right: 10px; cursor: pointer;">
+                    <img src="/static/pictures/icon4.png" alt="Додати до улюблених" class="favorite-icon-img" data-full="/static/pictures/iconfull.png">
+                </div>
+                <div class="compare-icon" onclick="addToCompare(this)">
+                    <img src="/static/pictures/icon3.png" style="width: 24px; height: 24px;" alt="Додати до порівняння" class="compare-icon-img">
+                </div>
+            </div>
+            <h3>Короткі характеристики:</h3>
+            <ul>
+                <li>Процесор: AMD Ryzen 5 5500"</li>
+                <li>Відеокарта: GeForce RTX 3050</li>
+                <li>Чипсет материнської плати: AMD A520</li>
+                <li>Обсяг оперативної пам'яті: 16 ГБ</li>
+            </ul>
+            <button class="buy-button" onclick="buyProduct('Комп’ютер COBRA Advanced', 'Ціна уточнюється')">Купити</button>
+        </div>
+    </div>
+    
+    <div class="product-card-inner" style="border: 1px solid #FD7E14; border-radius: 10px; overflow: hidden; padding: 15px; text-align: center; position: relative; height: 300px; display: flex; flex-direction: column; justify-content: flex-start; margin-right: 20px;">
+        <div class="product-card-front">
+            <img src="/static/pictures/pc4.png" style="width: 200px; height: 200px; object-fit: contain;" alt="Комп’ютер Cobra Gaming">
+            <div class="product-name" style="font-size: 16px; margin-left: -10px; margin-right: 20px;">Комп’ютер Cobra Gaming"</div>
+            <div class="product-price" style="color: black; font-size: 16px; font-weight: bold; margin: 15px 0;">₴35 999</div>
+        </div>
+        <div class="product-card-back">
+            <div class="icon-container">
+                <div class="favorite-icon" onclick="toggleFavorite(this)" style="position: absolute; top: 5px; right: 10px; cursor: pointer;">
+                    <img src="/static/pictures/icon4.png" alt="Додати до улюблених" class="favorite-icon-img" data-full="/static/pictures/iconfull.png">
+                </div>
+                <div class="compare-icon" onclick="addToCompare(this)">
+                    <img src="/static/pictures/icon3.png" style="width: 24px; height: 24px;" alt="Додати до порівняння" class="compare-icon-img">
+                </div>
+            </div>
+            <h3>Короткі характеристики:</h3>
+            <ul>
+                <li>Процесор: AMD Ryzen 5 5600X</li>
+                <li>Відеокарта: RTX 4060 Ti</li>
+                <li>Чипсет материнської плати: AMD B550</li>
+                <li>Обсяг оперативної пам'яті: 32 ГБ</li>
+            </ul>
+            <button class="buy-button" onclick="buyProduct('Комп’ютер Cobra Gaming', 'Ціна уточнюється')">Купити</button>
+        </div>
+    </div>
+    
+    <div class="product-card-inner" style="border: 1px solid #FD7E14; border-radius: 10px; overflow: hidden; padding: 15px; text-align: center; position: relative; height: 300px; display: flex; flex-direction: column; justify-content: flex-start; margin-right: 20px;">
+        <div class="product-card-front">
+            <img src="/static/pictures/pc5.png" style="width: 200px; height: 200px; object-fit: contain;" alt="Комп'ютер HP Elite Tower 800 G9">
+            <div class="product-name" style="font-size: 16px; margin-left: -10px; margin-right: 20px;">Комп'ютер HP Elite Tower 800 G9</div>
+            <div class="product-price" style="color: black; font-size: 16px; font-weight: bold; margin: 15px 0;">₴109 000</div>
+        </div>
+        <div class="product-card-back">
+            <div class="icon-container">
+                <div class="favorite-icon" onclick="toggleFavorite(this)" style="position: absolute; top: 5px; right: 10px; cursor: pointer;">
+                    <img src="/static/pictures/icon4.png" alt="Додати до улюблених" class="favorite-icon-img" data-full="/static/pictures/iconfull.png">
+                </div>
+                <div class="compare-icon" onclick="addToCompare(this)">
+                    <img src="/static/pictures/icon3.png" style="width: 24px; height: 24px;" alt="Додати до порівняння" class="compare-icon-img">
+                </div>
+            </div>
+            <h3>Короткі характеристики:</h3>
+            <ul>
+                <li>Процесор: Intel Core i9-14900</li>
+                <li>Відеокарта: GeForce RTX 4060</li>
+                <li>Чипсет материнської плати: Intel Q670 (vPro)</li>
+                <li>Обсяг оперативної пам'яті: 32 ГБ</li>
+            </ul>
+            <button class="buy-button" onclick="buyProduct('Комп’ютер HP Elite Tower 800 G9', 'Ціна уточнюється')">Купити</button>
+        </div>
+    </div>
+</div>
+
+
+<!--другий ряд-->
+<div class="product-container" style="display: flex; flex-wrap: nowrap; overflow-x: auto; padding: 0 20px; justify-content: center; align-items: center; margin-bottom: 40px; font-family: 'Roboto', sans-serif;">
+    <div class="product-card-inner" style="border: 1px solid #FD7E14; border-radius: 10px; overflow: hidden; padding: 15px; text-align: center; position: relative; height: 300px; display: flex; flex-direction: column; justify-content: flex-start; margin-right: 20px;">
+        <div class="product-card-front">
+            <img src="/static/pictures/pc6.png" style="width: 200px; height: 200px; object-fit: contain;" alt="Комп’ютер ARTLINE Overlord P99">
+            <div class="product-name" style="font-size: 16px; margin-left: -10px; margin-right: 20px;">Комп’ютер ARTLINE Overlord P99</div>
+            <div class="product-price" style="color: black; font-size: 16px; font-weight: bold; margin: 15px 0;">₴43 999</div>
+        </div>
+        <div class="product-card-back">
+            <div class="icon-container">
+                <div class="favorite-icon" onclick="toggleFavorite(this)" style="position: absolute; top: 5px; right: 10px; cursor: pointer;">
+                    <img src="/static/pictures/icon4.png" alt="Додати до улюблених" class="favorite-icon-img" data-full="/static/pictures/iconfull.png">
+                </div>
+                <div class="compare-icon" onclick="addToCompare(this)">
+                    <img src="/static/pictures/icon3.png" style="width: 24px; height: 24px;" alt="Додати до порівняння" class="compare-icon-img">
+                </div>
+            </div>
+            <h3>Короткі характеристики:</h3>
+            <ul>
+                <li>Процесор: Intel Core i9-14900KF</li>
+                <li>Відеокарта: GeForce RTX 4090</li>
+                <li>Чипсет материнської плати: Intel Z790</li>
+                <li>Обсяг оперативної пам'яті: 96 ГБ</li>
+            </ul>
+            <button class="buy-button" onclick="buyProduct('Комп’ютер ARTLINE Overlord P99', 'Ціна уточнюється')">Купити</button>
+        </div>
+    </div>
+    
+    <div class="product-card-inner" style="border: 1px solid #FD7E14; border-radius: 10px; overflow: hidden; padding: 15px; text-align: center; position: relative; height: 300px; display: flex; flex-direction: column; justify-content: flex-start; margin-right: 20px;">
+        <div class="product-card-front">
+            <img src="/static/pictures/pc7.png" style="width: 200px; height: 200px; object-fit: contain;" alt="Комп’ютер ARTLINE WorkStation W96">
+            <div class="product-name" style="font-size: 16px; margin-left: -10px; margin-right: 20px;">Комп’ютер ARTLINE WorkStation W96</div>
+            <div class="product-price" style="color: black; font-size: 16px; font-weight: bold; margin: 15px 0;">₴91 567</div>
+        </div>
+        <div class="product-card-back">
+            <div class="icon-container">
+                <div class="favorite-icon" onclick="toggleFavorite(this)" style="position: absolute; top: 5px; right: 10px; cursor: pointer;">
+                    <img src="/static/pictures/icon4.png" alt="Додати до улюблених" class="favorite-icon-img" data-full="/static/pictures/iconfull.png">
+                </div>
+                <div class="compare-icon" onclick="addToCompare(this)">
+                    <img src="/static/pictures/icon3.png" style="width: 24px; height: 24px;" alt="Додати до порівняння" class="compare-icon-img">
+                </div>
+            </div>
+            <h3>Короткі характеристики:</h3>
+            <ul>
+                <li>Процесор: Intel Core i9-14900KF</li>
+                <li>Відеокарта: GeForce RTX 4060 Ti</li>
+                <li>Чипсет материнської плати: Intel Z690</li>
+                <li>Обсяг оперативної пам'яті: 64 ГБ</li>
+            </ul>
+            <button class="buy-button" onclick="buyProduct('Комп’ютер ARTLINE WorkStation W96', 'Ціна уточнюється')">Купити</button>
+        </div>
+    </div>
+    
+    <div class="product-card-inner" style="border: 1px solid #FD7E14; border-radius: 10px; overflow: hidden; padding: 15px; text-align: center; position: relative; height: 300px; display: flex; flex-direction: column; justify-content: flex-start; margin-right: 20px;">
+        <div class="product-card-front">
+            <img src="/static/pictures/pc8.png" style="width: 200px; height: 200px; object-fit: contain;" alt="Комп'ютер 1stPlayer">
+            <div class="product-name" style="font-size: 16px; margin-left: -10px; margin-right: 20px;">Комп'ютер 1stPlayer</div>
+            <div class="product-price" style="color: black; font-size: 16px; font-weight: bold; margin: 15px 0;">₴27 746</div>
+        </div>
+        <div class="product-card-back">
+            <div class="icon-container">
+                <div class="favorite-icon" onclick="toggleFavorite(this)" style="position: absolute; top: 5px; right: 10px; cursor: pointer;">
+                    <img src="/static/pictures/icon4.png" alt="Додати до улюблених" class="favorite-icon-img" data-full="/static/pictures/iconfull.png">
+                </div>
+                <div class="compare-icon" onclick="addToCompare(this)">
+                    <img src="/static/pictures/icon3.png" style="width: 24px; height: 24px;" alt="Додати до порівняння" class="compare-icon-img">
+                </div>
+            </div>
+            <h3>Короткі характеристики:</h3>
+            <ul>
+                <li> Процесор: AMD Ryzen 5 5500</li>
+                <li>Материнська плата: Asus Prime A320M-K</li>
+                <li>ОЗУ: 16 GB DDR4 3200 MHz</li>
+                <li>Відеокарта: Radeon RX 6600 8ГБ</li>
+            </ul>
+            <button class="buy-button" onclick="buyProduct('Комп’ютер 1stPlayer', 'Ціна уточнюється')">Купити</button>
+        </div>
+    </div>
+    
+    <div class="product-card-inner" style="border: 1px solid #FD7E14; border-radius: 10px; overflow: hidden; padding: 15px; text-align: center; position: relative; height: 300px; display: flex; flex-direction: column; justify-content: flex-start; margin-right: 20px;">
+        <div class="product-card-front">
+            <img src="/static/pictures/pc9.png" style="width: 200px; height: 200px; object-fit: contain;" alt="Ігровий ПК Oberon">
+            <div class="product-name" style="font-size: 16px; margin-left: -10px; margin-right: 20px;">Ігровий ПК Oberon</div>
+            <div class="product-price" style="color: black; font-size: 16px; font-weight: bold; margin: 15px 0;">₴17 675</div>
+        </div>
+        <div class="product-card-back">
+            <div class="icon-container">
+                <div class="favorite-icon" onclick="toggleFavorite(this)" style="position: absolute; top: 5px; right: 10px; cursor: pointer;">
+                    <img src="/static/pictures/icon4.png" alt="Додати до улюблених" class="favorite-icon-img" data-full="/static/pictures/iconfull.png">
+                </div>
+                <div class="compare-icon" onclick="addToCompare(this)">
+                    <img src="/static/pictures/icon3.png" style="width: 24px; height: 24px;" alt="Додати до порівняння" class="compare-icon-img">
+                </div>
+            </div>
+            <h3>Короткі характеристики:</h3>
+            <ul>
+                <li>Процесор: Чотириядерний Intel Core i5-6500</li>
+                <li>Відеокарта: AMD Radeon RX 570</li>
+                <li>Чипсет материнської плати: H110M</li>
+                <li>Обсяг оперативної пам'яті: 16 ГБ</li>
+            </ul>
+            <button class="buy-button" onclick="buyProduct('Ігровий ПК Oberon', 'Ціна уточнюється')">Купити</button>
+        </div>
+    </div>
+  
+  
+    <div class="product-card-inner" style="border: 1px solid #FD7E14; border-radius: 10px; overflow: hidden; padding: 15px; text-align: center; position: relative; height: 300px; display: flex; flex-direction: column; justify-content: flex-start; margin-right: 20px;">
+        <div class="product-card-front">
+            <img src="/static/pictures/pc10.png" style="width: 200px; height: 200px; object-fit: contain;" alt="Комп'ютер ARTLINE Gaming X48">
+            <div class="product-name" style="font-size: 16px; margin-left: -10px; margin-right: 20px;">Комп'ютер ARTLINE Gaming X48</div>
+            <div class="product-price" style="color: black; font-size: 16px; font-weight: bold; margin: 15px 0;">₴24 999</div>
+        </div>
+        <div class="product-card-back">
+            <div class="icon-container">
+                <div class="favorite-icon" onclick="toggleFavorite(this)" style="position: absolute; top: 5px; right: 10px; cursor: pointer;">
+                    <img src="/static/pictures/icon4.png" alt="Додати до улюблених" class="favorite-icon-img" data-full="/static/pictures/iconfull.png">
+                </div>
+                <div class="compare-icon" onclick="addToCompare(this)">
+                    <img src="/static/pictures/icon3.png" style="width: 24px; height: 24px;" alt="Додати до порівняння" class="compare-icon-img">
+                </div>
+            </div>
+            <h3>Короткі характеристики:</h3>
+            <ul>
+                <li>Процесор: Шестиядерний AMD Ryzen 5 3600</li>
+                <li>Відеокарта: AMD Radeon RX 6600</li>
+                <li>Чипсет материнської плати: AMD B450 (PRIME B450M-K)</li>
+                <li>Обсяг оперативної пам'яті: 16 ГБ</li>
+            </ul>
+            <button class="buy-button" onclick="buyProduct('Комп’ютер ARTLINE Gaming X48', 'Ціна уточнюється')">Купити</button>
+        </div>
+    </div>
+    
+</div>
+
+
+{% endblock %}
+
+

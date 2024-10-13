@@ -1,0 +1,298 @@
+{% extends 'base.html'%}
+
+{% block title%}
+Головна сторінка
+{% endblock%}
+
+{% block mainContent%}
+<div>
+    <div class="ad-container">
+        <img src="/static/pictures/baner1.png" alt="Реклама 1" class="ad-image" style="opacity: 1;">
+        <img src="/static/pictures/baner2.png" alt="Реклама 2" class="ad-image" style="opacity: 0;">
+        <img src="/static/pictures/baner3.jpg" alt="Реклама 1" class="ad-image" style="opacity: 1;">
+        <img src="/static/pictures/baner4.jpg" alt="Реклама 2" class="ad-image" style="opacity: 0;">
+    </div>
+
+    <div id="product-container" class="product-container">
+         
+        <div id="notification" style="display: none; position: fixed; bottom: 0; left: 0; width: 100%; font-size: 20px; background-color: #2C3E50; color: #FD7E14; text-align: center; padding: 10px; border-radius: 5px; z-index: 1000;">
+        Повідомлення
+        </div>
+        
+    </div>
+    <br>
+</div>
+{% endblock%}
+
+
+{% block Goods %}
+<div class="product-container" style="display: flex; flex-wrap: nowrap; overflow-x: auto; padding: 0 20px; justify-content: center; align-items: center; margin-bottom: 40px; font-family: 'Roboto', sans-serif;">
+    <div class="product-card-inner" style="border: 1px solid #FD7E14; border-radius: 10px; overflow: hidden; padding: 15px; text-align: center; position: relative; height: 300px; display: flex; flex-direction: column; justify-content: flex-start; margin-right: 20px;">
+        <div class="product-card-front">
+            <img src="/static/pictures/index1.png" style="width: 150px; height: 150px; object-fit: contain; margin: 20px auto;" alt="Смарт-годинник Apple Watch Series 10 GPS 46mm Jet Black">
+            <div class="product-name" style="font-size: 16px; margin-left: -10px; margin-right: 20px;">Смарт-годинник Apple Watch Series 10 GPS 46mm Jet Black</div>
+            <div class="product-price" style="color: black; font-size: 16px; font-weight: bold; margin: 15px 0;">₴23 799</div>
+        </div>
+        <div class="product-card-back">
+            <div class="icon-container">
+                <div class="favorite-icon" onclick="toggleFavorite(this)" style="position: absolute; top: 5px; right: 10px; cursor: pointer;">
+                    <img src="/static/pictures/icon4.png" alt="Додати до улюблених" class="favorite-icon-img" data-full="/static/pictures/iconfull.png">
+                </div>
+                <div class="compare-icon" onclick="addToCompare(this)">
+                    <img src="/static/pictures/icon3.png" style="width: 24px; height: 24px;" alt="Додати до порівняння" class="compare-icon-img">
+                </div>
+            </div>
+            <h3>Короткі характеристики:</h3>
+            <ul>
+                <li>Дисплей: 46mm</li>
+                <li>GPS: вбудований</li>
+                <li>Колір: Jet Black</li>
+                <li>Акумулятор: до 18 годин</li>
+            </ul>
+            <button class="buy-button" onclick="buyProduct('Смарт-годинник Apple Watch Series 10 GPS 46mm Jet Black', 23799)">Купити</button>
+        </div>
+    </div>
+
+    <div class="product-card-inner" style="border: 1px solid #FD7E14; border-radius: 10px; overflow: hidden; padding: 15px; text-align: center; position: relative; height: 300px; display: flex; flex-direction: column; justify-content: flex-start; margin-right: 20px;">
+        <div class="product-card-front">
+            <img src="/static/pictures/index2.png" style="width: 150px; height: 150px; object-fit: contain; margin: 20px auto;" alt="Навушники Apple AirPods (4 покоління)">
+            <div class="product-name" style="font-size: 16px; margin-left: -10px; margin-right: 20px;">Навушники Apple AirPods (4 покоління)</div>
+            <div class="product-price" style="color: black; font-size: 16px; font-weight: bold; margin: 15px 0;">₴7 399</div> 
+        </div>
+        <div class="product-card-back">
+            <div class="icon-container">
+                <div class="favorite-icon" onclick="toggleFavorite(this)" style="position: absolute; top: 5px; right: 10px; cursor: pointer;">
+                    <img src="/static/pictures/icon4.png" alt="Додати до улюблених" class="favorite-icon-img" data-full="/static/pictures/iconfull.png">
+                </div>
+                <div class="compare-icon" onclick="addToCompare(this)" style="cursor: pointer;">
+                    <img src="/static/pictures/icon3.png" style="width: 24px; height: 24px;" alt="Додати до порівняння" class="compare-icon-img">
+                </div>
+            </div>
+            <h3>Короткі характеристики:</h3>
+            <ul>
+                <li>Тип: бездротові</li>
+                <li>Час роботи: до 24 годин</li>
+                <li>Код: A2031</li>
+                <li>Вага: 5.4 г</li>
+            </ul>
+            <button class="buy-button" onclick="buyProduct('Навушники Apple AirPods (4 покоління)', 7399)">Купити</button>
+        </div>
+    </div>
+
+    <div class="product-card-inner" style="border: 1px solid #FD7E14; border-radius: 10px; overflow: hidden; padding: 15px; text-align: center; position: relative; height: 300px; display: flex; flex-direction: column; justify-content: flex-start; margin-right: 20px;">
+        <div class="product-card-front">
+            <img src="/static/pictures/index3.png" style="width: 150px; height: 150px; object-fit: contain; margin: 20px auto;" alt="Смарт-годинник Apple Watch Series 10 GPS Rose Gold">
+            <div class="product-name" style="font-size: 16px; margin-left: -10px; margin-right: 20px;">Смарт-годинник Apple Watch Series 10 GPS Rose Gold</div>
+            <div class="product-price" style="color: black; font-size: 16px; font-weight: bold; margin: 15px 0;">₴22 299</div> 
+        </div>
+        <div class="product-card-back">
+            <div class="icon-container">
+                <div class="favorite-icon" onclick="toggleFavorite(this)" style="position: absolute; top: 5px; right: 10px; cursor: pointer;">
+                    <img src="/static/pictures/icon4.png" alt="Додати до улюблених" class="favorite-icon-img" data-full="/static/pictures/iconfull.png">
+                </div>
+                <div class="compare-icon" onclick="addToCompare(this)" style="cursor: pointer;">
+                    <img src="/static/pictures/icon3.png" style="width: 24px; height: 24px;" alt="Додати до порівняння" class="compare-icon-img">
+                </div>
+            </div>
+            <h3>Короткі характеристики:</h3>
+            <ul>
+                <li>Дисплей: 45mm</li>
+                <li>GPS: вбудований</li>
+                <li>Колір: Rose Gold</li>
+                <li>Акумулятор: до 18 годин</li>
+            </ul>
+            <button class="buy-button" onclick="buyProduct('Смарт-годинник Apple Watch Series 10 GPS Rose Gold', 22299)">Купити</button>
+        </div>
+    </div>
+
+    <div class="product-card-inner" style="border: 1px solid #FD7E14; border-radius: 10px; overflow: hidden; padding: 15px; text-align: center; position: relative; height: 300px; display: flex; flex-direction: column; justify-content: flex-start; margin-right: 20px;">
+        <div class="product-card-front">
+            <img src="/static/pictures/index4.png" style="width: 150px; height: 150px; object-fit: contain; margin: 20px auto;" alt="Кліматичний комплекс PureProtect Серія 3400 PHILIPS">
+            <div class="product-name" style="font-size: 16px; margin-left: -10px; margin-right: 20px;">Кліматичний комплекс PureProtect Серія 3400 PHILIPS</div>
+            <div class="product-price" style="color: black; font-size: 16px; font-weight: bold; margin: 15px 0;">₴14 999</div> 
+        </div>
+        <div class="product-card-back">
+            <div class="icon-container">
+                <div class="favorite-icon" onclick="toggleFavorite(this)" style="position: absolute; top: 5px; right: 10px; cursor: pointer;">
+                    <img src="/static/pictures/icon4.png" alt="Додати до улюблених" class="favorite-icon-img" data-full="/static/pictures/iconfull.png">
+                </div>
+                <div class="compare-icon" onclick="addToCompare(this)" style="cursor: pointer;">
+                    <img src="/static/pictures/icon3.png" style="width: 24px; height: 24px;" alt="Додати до порівняння" class="compare-icon-img">
+                </div>
+            </div>
+            <h3>Короткі характеристики:</h3>
+            <ul>
+                <li>Об'єм: 3400 м³</li>
+                <li>Споживана потужність: 400 Вт</li>
+                <li>Технологія: NanoFresh</li>
+                <li>Тип: очисник повітря</li>
+            </ul>
+            <button class="buy-button" onclick="buyProduct('Кліматичний комплекс PureProtect Серія 3400 PHILIPS', 14999)">Купити</button>
+        </div>
+    </div>
+
+    <div class="product-card-inner" style="border: 1px solid #FD7E14; border-radius: 10px; overflow: hidden; padding: 15px; text-align: center; position: relative; height: 300px; display: flex; flex-direction: column; justify-content: flex-start; margin-right: 20px;">
+        <div class="product-card-front">
+            <img src="/static/pictures/index5.png" style="width: 150px; height: 150px; object-fit: contain; margin: 20px auto;" alt="">
+            <div class="product-name" style="font-size: 16px; margin-left: -10px; margin-right: 20px;">Мобільний телефон Apple iPhone 15 Pro Max 256GB</div>
+            <div class="product-price" style="color: black; font-size: 16px; font-weight: bold; margin: 15px 0;">₴7 499</div> 
+        </div>
+        <div class="product-card-back">
+            <div class="icon-container">
+                <div class="favorite-icon" onclick="toggleFavorite(this)" style="position: absolute; top: 5px; right: 10px; cursor: pointer;">
+                    <img src="/static/pictures/icon4.png" alt="Додати до улюблених" class="favorite-icon-img" data-full="/static/pictures/iconfull.png">
+                </div>
+                <div class="compare-icon" onclick="addToCompare(this)" style="cursor: pointer;">
+                    <img src="/static/pictures/icon3.png" style="width: 24px; height: 24px;" alt="Додати до порівняння" class="compare-icon-img">
+                </div>
+            </div>
+            <h3>Короткі характеристики:</h3>
+            <ul>
+                <li>Потужність: 30 Вт</li>
+                <li>Час роботи: до 20 годин</li>
+                <li>Вага: 960 г</li>
+                <li>Захист: IP67</li>
+            </ul>
+            <button class="buy-button" onclick="buyProduct('Портативна колонка JBL Charge 5', 7499)">Купити</button>
+        </div>
+    </div>
+</div>
+
+
+<!--другий ряд-->
+<div class="product-container" style="display: flex; flex-wrap: nowrap; overflow-x: auto; padding: 0 20px; justify-content: center; align-items: center; margin-bottom: 40px; font-family: 'Roboto', sans-serif;">
+    <div class="product-card-inner" style="border: 1px solid #FD7E14; border-radius: 10px; overflow: hidden; padding: 15px; text-align: center; position: relative; height: 300px; display: flex; flex-direction: column; justify-content: flex-start; margin-right: 20px;">
+        <div class="product-card-front">
+            <img src="/static/pictures/index6.png" style="width: 150px; height: 150px; object-fit: contain; margin: 20px auto;" alt="">
+            <div class="product-name" style="font-size: 16px; margin-left: -10px; margin-right: 20px;">Мобільний телефон Apple iPhone 16 Pro Max 256GB</div>
+            <div class="product-price" style="color: black; font-size: 16px; font-weight: bold; margin: 15px 0;">₴ 70 999</div>
+        </div>
+        <div class="product-card-back">
+            <div class="icon-container">
+                <div class="favorite-icon" onclick="toggleFavorite(this)" style="position: absolute; top: 5px; right: 10px; cursor: pointer;">
+                    <img src="/static/pictures/icon4.png" alt="Додати до улюблених" class="favorite-icon-img" data-full="/static/pictures/iconfull.png">
+                </div>
+                <div class="compare-icon" onclick="addToCompare(this)">
+                    <img src="/static/pictures/icon3.png" style="width: 24px; height: 24px;" alt="Додати до порівняння" class="compare-icon-img">
+                </div>
+            </div>
+            <h3>Короткі характеристики:</h3>
+            <ul>
+                <li>Дисплей: 6.7 дюймів</li>
+                <li>Процесор: A16 Bionic</li>
+                <li>Камера: Подвійна 48 МП</li>
+                <li>Акумулятор: до 29 годин</li>
+            </ul>
+            <button class="buy-button" onclick="buyProduct('Мобільний телефон Apple iPhone 16 Pro Max 256GB', 70999)">Купити</button>
+        </div>
+    </div>
+
+    <div class="product-card-inner" style="border: 1px solid #FD7E14; border-radius: 10px; overflow: hidden; padding: 15px; text-align: center; position: relative; height: 300px; display: flex; flex-direction: column; justify-content: flex-start; margin-right: 20px;">
+        <div class="product-card-front">
+            <img src="/static/pictures/index7.png" style="width: 150px; height: 150px; object-fit: contain; margin: 20px auto;" alt="">
+            <div class="product-name" style="font-size: 16px; margin-left: -10px; margin-right: 20px;">Ігрова приставка Sony PlayStation 5 Pro</div>
+            <div class="product-price" style="color: black; font-size: 16px; font-weight: bold; margin: 15px 0;">₴ 34 999</div>
+        </div>
+        <div class="product-card-back">
+            <div class="icon-container">
+                <div class="favorite-icon" onclick="toggleFavorite(this)" style="position: absolute; top: 5px; right: 10px; cursor: pointer;">
+                    <img src="/static/pictures/icon4.png" alt="Додати до улюблених" class="favorite-icon-img" data-full="/static/pictures/iconfull.png">
+                </div>
+                <div class="compare-icon" onclick="addToCompare(this)">
+                    <img src="/static/pictures/icon3.png" style="width: 24px; height: 24px;" alt="Додати до порівняння" class="compare-icon-img">
+                </div>
+            </div>
+            <h3>Короткі характеристики:</h3>
+            <ul>
+                <li>Процесор: AMD Ryzen Zen 2</li>
+                <li>Графіка: AMD Radeon RDNA 2</li>
+                <li>Пам'ять: 16 ГБ GDDR6</li>
+                <li>Сховище: 825 ГБ SSD</li>
+            </ul>
+            <button class="buy-button" onclick="buyProduct('Ігрова приставка Sony PlayStation 5 Pro', 34999)">Купити</button>
+        </div>
+    </div>
+
+    <div class="product-card-inner" style="border: 1px solid #FD7E14; border-radius: 10px; overflow: hidden; padding: 15px; text-align: center; position: relative; height: 300px; display: flex; flex-direction: column; justify-content: flex-start; margin-right: 20px;">
+        <div class="product-card-front">
+            <img src="/static/pictures/index8.png" style="width: 150px; height: 150px; object-fit: contain; margin: 20px auto;" alt="">
+            <div class="product-name" style="font-size: 16px; margin-left: -10px; margin-right: 20px;">Мобільний телефон Apple iPhone 16 128GB White</div>
+            <div class="product-price" style="color: black; font-size: 16px; font-weight: bold; margin: 15px 0;">₴ 44 999</div>
+        </div>
+        <div class="product-card-back">
+            <div class="icon-container">
+                <div class="favorite-icon" onclick="toggleFavorite(this)" style="position: absolute; top: 5px; right: 10px; cursor: pointer;">
+                    <img src="/static/pictures/icon4.png" alt="Додати до улюблених" class="favorite-icon-img" data-full="/static/pictures/iconfull.png">
+                </div>
+                <div class="compare-icon" onclick="addToCompare(this)">
+                    <img src="/static/pictures/icon3.png" style="width: 24px; height: 24px;" alt="Додати до порівняння" class="compare-icon-img">
+                </div>
+            </div>
+            <h3>Короткі характеристики:</h3>
+            <ul>
+                <li>Тип: Навушники накладні</li>
+                <li>Зв'язок: Bluetooth 5.0</li>
+                <li>Час роботи: до 20 годин</li>
+                <li>Сумісність: iOS, Android</li>
+            </ul>
+            <button class="buy-button" onclick="buyProduct('Мобільний телефон Apple iPhone 16 128GB White', 44999)">Купити</button>
+        </div>
+    </div>
+
+    <div class="product-card-inner" style="border: 1px solid #FD7E14; border-radius: 10px; overflow: hidden; padding: 15px; text-align: center; position: relative; height: 300px; display: flex; flex-direction: column; justify-content: flex-start; margin-right: 20px;">
+        <div class="product-card-front">
+            <img src="/static/pictures/index9.png" style="width: 150px; height: 150px; object-fit: contain; margin: 20px auto;" alt="Навушники Apple AirPods Max Midnight">
+            <div class="product-name" style="font-size: 16px; margin-left: -10px; margin-right: 20px;">Навушники Apple AirPods Max Midnight (2-ге покоління)</div>
+            <div class="product-price" style="color: black; font-size: 16px; font-weight: bold; margin: 15px 0;">₴ 27 499</div>
+        </div>
+        <div class="product-card-back">
+            <div class="icon-container">
+                <div class="favorite-icon" onclick="toggleFavorite(this)" style="position: absolute; top: 5px; right: 10px; cursor: pointer;">
+                    <img src="/static/pictures/icon4.png" alt="Додати до улюблених" class="favorite-icon-img" data-full="/static/pictures/iconfull.png">
+                </div>
+                <div class="compare-icon" onclick="addToCompare(this)">
+                    <img src="/static/pictures/icon3.png" style="width: 24px; height: 24px;" alt="Додати до порівняння" class="compare-icon-img">
+                </div>
+            </div>
+            <h3>Короткі характеристики:</h3>
+            <ul>
+                <li>Тип: Навушники накладні</li>
+                <li>Зв'язок: Bluetooth 5.0</li>
+                <li>Час роботи: до 20 годин</li>
+                <li>Сумісність: iOS, Android</li>
+            </ul>
+            <button class="buy-button" onclick="buyProduct('Навушники Apple AirPods Max Midnight (2-ге покоління)', 27499)">Купити</button>
+        </div>
+    </div>
+    <div class="product-card-inner" style="border: 1px solid #FD7E14; border-radius: 10px; overflow: hidden; padding: 15px; text-align: center; position: relative; height: 300px; display: flex; flex-direction: column; justify-content: flex-start; margin-right: 20px;">
+        <div class="product-card-front">
+            <img src="/static/pictures/index10.png" style="width: 150px; height: 150px; object-fit: contain; margin: 20px auto;" alt="Навушники Apple AirPods Max Purple">
+            <div class="product-name" style="font-size: 16px; margin-left: -10px; margin-right: 20px;">Навушники Apple AirPods Max Purple (2-ге покоління)</div>
+            <div class="product-price" style="color: black; font-size: 16px; font-weight: bold; margin: 15px 0;">₴ 27 499</div>
+        </div>
+        <div class="product-card-back">
+            <div class="icon-container">
+                <div class="favorite-icon" onclick="toggleFavorite(this)" style="position: absolute; top: 5px; right: 10px; cursor: pointer;">
+                    <img src="/static/pictures/icon4.png" alt="Додати до улюблених" class="favorite-icon-img" data-full="/static/pictures/iconfull.png">
+                </div>
+                <div class="compare-icon" onclick="addToCompare(this)">
+                    <img src="/static/pictures/icon3.png" style="width: 24px; height: 24px;" alt="Додати до порівняння" class="compare-icon-img">
+                </div>
+            </div>
+            <h3>Короткі характеристики:</h3>
+            <ul>
+                <li>Тип: Навушники накладні</li>
+                <li>Зв'язок: Bluetooth 5.0</li>
+                <li>Час роботи: до 20 годин</li>
+                <li>Сумісність: iOS, Android</li>
+            </ul>
+            <button class="buy-button" onclick="buyProduct('Навушники Apple AirPods Max Purple (2-ге покоління)', 27499)">Купити</button>
+        </div>
+    </div>
+
+</div>
+
+
+{% endblock %}
+
+
