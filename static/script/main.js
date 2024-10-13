@@ -199,7 +199,7 @@ function showProducts(category) {
                   <li><a href="http://127.0.0.1:5000/laptops">Ноутбуки</a></li>
                </div>
                <div class="laptop-column">
-                  <li><a href="link_to_laptop11">ПК</a></li>
+                  <li><a href="http://127.0.0.1:5000/pc">ПК</a></li>
                </div>
             </div>
         `;
